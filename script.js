@@ -8,6 +8,15 @@ const toggle2 = document.getElementById("rejected-toggle");
 const interviewCount = document.getElementById("interview-count");
 const rejectedCount = document.getElementById("rejected-count");
 
+
+// Delete function
+
+const card = document.getElementById("job-card");
+const delete_btn = document.getElementById("delete");
+delete_btn.addEventListener("click", function () {
+    card.remove();
+})
+
 let currentStatus = null; // "interview" | "rejected" | null
 
 interview_btn.addEventListener("click", function () {
