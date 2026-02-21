@@ -23,19 +23,19 @@
       <!-- Total -->
       <div class="flex flex-col w-[400px] h-[100px] p-5 mt-6 bg-white rounded-md">
         <p class="text-sm">Total</p>
-        <p class="mt-3 text-2xl font-bold">0</p>
+        <p id="total" class="mt-3 text-2xl font-bold">0</p>
       </div>
 
       <!-- Interview -->
       <div class="flex flex-col w-[400px] h-[100px] p-5 mt-6 bg-white rounded-md">
         <p class="text-sm">Interview</p>
-        <p class="mt-3 text-2xl text-green-400 font-bold">0</p>
+        <p id="interview-count" class="mt-3 text-2xl text-green-400 font-bold">0</p>
       </div>
 
       <!-- Rejected -->
       <div class="flex flex-col w-[400px] h-[100px] p-5 mt-6 bg-white rounded-md">
         <p class="text-sm">Rejected</p>
-        <p class="mt-3 text-2xl text-red-500 font-bold">0</p>
+        <p id="rejected-count" class="mt-3 text-2xl text-red-500 font-bold">0</p>
       </div>
 
     </div>
@@ -78,20 +78,23 @@
 
         <p class="mt-5 text-sm text-[#64748B]">Remote • Full-time • $130,000 - $175,000</p>
 
+        <button id="interview-toggle" class="hidden btn btn-primary bg-transparent shadow-none mt-4 px-3 py-2 text-green-400 border border-green-400 rounded-md font-bold ">INTERVIEW</button>
+        <button id="rejected-toggle" class="hidden btn btn-primary bg-transparent shadow-none mt-4 px-3 py-2 text-[#EF4444] border border-[#EF4444] rounded-md font-bold ">REJECTED</button>
+
         <p class="px-3 py-2 mt-5 text-sm font-semibold bg-[#F1F2F4] rounded-md w-[113px] text-[#002C5C]">NOT APPLIED</p>
 
         <p class="mt-2 text-[#323B49]">Build cross-platform mobile applications using React Native.</p>
 
         <div class="flex gap-4 mt-5">
-          <button class=" btn btn-primary bg-transparent shadow-none px-3 py-2 text-green-400 border border-green-400 rounded-md font-bold hover: cursor-pointer">INTERVIEW</button>
+          <button id="interview-btn" class=" btn btn-primary bg-transparent shadow-none px-3 py-2 text-green-400 border border-green-400 rounded-md font-bold hover: cursor-pointer">INTERVIEW</button>
 
-          <button class=" btn btn-primary bg-transparent shadow-none px-3 py-2 text-[#EF4444] border border-[#EF4444] rounded-md font-bold hover: cursor-pointer">REJECTED</button>
+          <button id="rejected-btn" class=" btn btn-primary bg-transparent shadow-none px-3 py-2 text-[#EF4444] border border-[#EF4444] rounded-md font-bold hover: cursor-pointer">REJECT</button>
         </div>
 
       </div>
 
-      <!---card-2----->
-      <div id="job-card" class="p-5 mt-5 bg-white rounded-md">
+      <!--card-2--->
+      <!-- <div id="job-card" class="p-5 mt-5 bg-white rounded-md">
 
         <div class="flex justify-between items-center pr-4">
           <div>
@@ -109,15 +112,15 @@
         <p class="mt-2 text-[#323B49]">Create stunning web experiences for high-profile clients. Must have portfolio and experience with modern web design trends.</p>
 
         <div class="flex gap-4 mt-5">
-          <button class=" btn btn-primary bg-transparent shadow-none px-3 py-2 text-green-400 border border-green-400 rounded-md font-bold hover: cursor-pointer">INTERVIEW</button>
+          <button id="interview-btn" class=" btn btn-primary bg-transparent shadow-none px-3 py-2 text-green-400 border border-green-400 rounded-md font-bold hover: cursor-pointer">INTERVIEW</button>
 
-          <button class=" btn btn-primary bg-transparent shadow-none px-3 py-2 text-[#EF4444] border border-[#EF4444] rounded-md font-bold hover: cursor-pointer">REJECTED</button>
+          <button id="rejected-btn" class=" btn btn-primary bg-transparent shadow-none px-3 py-2 text-[#EF4444] border border-[#EF4444] rounded-md font-bold hover: cursor-pointer">REJECTED</button>
         </div>
 
-      </div>
+      </div> -->
 
       <!---card-3----->
-      <div id="job-card" class="p-5 mt-5 bg-white rounded-md">
+      <!-- <div id="job-card" class="p-5 mt-5 bg-white rounded-md">
 
         <div class="flex justify-between items-center pr-4">
           <div>
@@ -135,15 +138,15 @@
         <p class="mt-2 text-[#323B49]">Transform complex data into compelling visualizations. Required skills: D3.js, React, and strong analytical thinking.</p>
 
         <div class="flex gap-4 mt-5">
-          <button class=" btn btn-primary bg-transparent shadow-none px-3 py-2 text-green-400 border border-green-400 rounded-md font-bold hover: cursor-pointer">INTERVIEW</button>
+          <button id="interview-btn" class=" btn btn-primary bg-transparent shadow-none px-3 py-2 text-green-400 border border-green-400 rounded-md font-bold hover: cursor-pointer">INTERVIEW</button>
 
-          <button class=" btn btn-primary bg-transparent shadow-none px-3 py-2 text-[#EF4444] border border-[#EF4444] rounded-md font-bold hover: cursor-pointer">REJECTED</button>
+          <button id="rejected-btn" class=" btn btn-primary bg-transparent shadow-none px-3 py-2 text-[#EF4444] border border-[#EF4444] rounded-md font-bold hover: cursor-pointer">REJECTED</button>
         </div>
 
-      </div>
+      </div> -->
 
       <!---card-4------>
-      <div id="job-card" class="p-5 mt-5 bg-white rounded-md">
+      <!-- <div id="job-card" class="p-5 mt-5 bg-white rounded-md">
 
         <div class="flex justify-between items-center pr-4">
           <div>
@@ -161,15 +164,15 @@
         <p class="mt-2 text-[#323B49]">Design and maintain scalable backend systems using Python and AWS. Work with modern DevOps practices and cloud infrastructure.</p>
 
         <div class="flex gap-4 mt-5">
-          <button class=" btn btn-primary bg-transparent shadow-none px-3 py-2 text-green-400 border border-green-400 rounded-md font-bold hover: cursor-pointer">INTERVIEW</button>
+          <button id="interview-btn" class=" btn btn-primary bg-transparent shadow-none px-3 py-2 text-green-400 border border-green-400 rounded-md font-bold hover: cursor-pointer">INTERVIEW</button>
 
-          <button class=" btn btn-primary bg-transparent shadow-none px-3 py-2 text-[#EF4444] border border-[#EF4444] rounded-md font-bold hover: cursor-pointer">REJECTED</button>
+          <button id="rejected-btn" class=" btn btn-primary bg-transparent shadow-none px-3 py-2 text-[#EF4444] border border-[#EF4444] rounded-md font-bold hover: cursor-pointer">REJECTED</button>
         </div>
 
-      </div>
+      </div> -->
 
       <!---card-5------>
-      <div id="job-card" class="p-5 mt-5 bg-white rounded-md">
+      <!-- <div id="job-card" class="p-5 mt-5 bg-white rounded-md">
 
         <div class="flex justify-between items-center pr-4">
           <div>
@@ -187,15 +190,15 @@
         <p class="mt-2 text-[#323B49]">Design and maintain scalable backend systems using Python and AWS. Work with modern DevOps practices and cloud infrastructure.</p>
 
         <div class="flex gap-4 mt-5">
-          <button class=" btn btn-primary bg-transparent shadow-none px-3 py-2 text-green-400 border border-green-400 rounded-md font-bold hover: cursor-pointer">INTERVIEW</button>
+          <button id="interview-btn" class=" btn btn-primary bg-transparent shadow-none px-3 py-2 text-green-400 border border-green-400 rounded-md font-bold hover: cursor-pointer">INTERVIEW</button>
 
-          <button class=" btn btn-primary bg-transparent shadow-none px-3 py-2 text-[#EF4444] border border-[#EF4444] rounded-md font-bold hover: cursor-pointer">REJECTED</button>
+          <button id="rejected-btn" class=" btn btn-primary bg-transparent shadow-none px-3 py-2 text-[#EF4444] border border-[#EF4444] rounded-md font-bold hover: cursor-pointer">REJECTED</button>
         </div>
 
-      </div>
+      </div> -->
 
       <!---card-6------>
-      <div id="job-card" class="p-5 mt-5 bg-white rounded-md">
+      <!-- <div id="job-card" class="p-5 mt-5 bg-white rounded-md">
 
         <div class="flex justify-between items-center pr-4">
           <div>
@@ -213,15 +216,15 @@
         <p class="mt-2 text-[#323B49]">Create beautiful and functional user interfaces for our suite of products. Strong design skills and frontend development expertise required.</p>
 
         <div class="flex gap-4 mt-5">
-          <button class=" btn btn-primary bg-transparent shadow-none px-3 py-2 text-green-400 border border-green-400 rounded-md font-bold hover: cursor-pointer">INTERVIEW</button>
+          <button id="interview-btn" class=" btn btn-primary bg-transparent shadow-none px-3 py-2 text-green-400 border border-green-400 rounded-md font-bold hover: cursor-pointer">INTERVIEW</button>
 
-          <button class=" btn btn-primary bg-transparent shadow-none px-3 py-2 text-[#EF4444] border border-[#EF4444] rounded-md font-bold hover: cursor-pointer">REJECTED</button>
+          <button id="rejected-btn" class=" btn btn-primary bg-transparent shadow-none px-3 py-2 text-[#EF4444] border border-[#EF4444] rounded-md font-bold hover: cursor-pointer">REJECTED</button>
         </div>
 
-      </div>
+      </div> -->
 
       <!---card-7------>
-      <div id="job-card" class="p-5 mt-5 bg-white rounded-md">
+      <!-- <div id="job-card" class="p-5 mt-5 bg-white rounded-md">
 
         <div class="flex justify-between items-center pr-4">
           <div>
@@ -239,15 +242,15 @@
         <p class="mt-2 text-[#323B49]">Build enterprise applications with JavaScript and modern frameworks. We offer competitive compensation, health insurance, and professional development opportunities.</p>
 
         <div class="flex gap-4 mt-5">
-          <button class=" btn btn-primary bg-transparent shadow-none px-3 py-2 text-green-400 border border-green-400 rounded-md font-bold hover: cursor-pointer">INTERVIEW</button>
+          <button id="interview-btn" class=" btn btn-primary bg-transparent shadow-none px-3 py-2 text-green-400 border border-green-400 rounded-md font-bold hover: cursor-pointer">INTERVIEW</button>
 
-          <button class=" btn btn-primary bg-transparent shadow-none px-3 py-2 text-[#EF4444] border border-[#EF4444] rounded-md font-bold hover: cursor-pointer">REJECTED</button>
+          <button id="rejected-btn" class=" btn btn-primary bg-transparent shadow-none px-3 py-2 text-[#EF4444] border border-[#EF4444] rounded-md font-bold hover: cursor-pointer">REJECTED</button>
         </div>
 
-      </div>
+      </div> -->
 
       <!---card-8------>
-      <div id="job-card" class="p-5 mt-5 bg-white rounded-md">
+      <!-- <div id="job-card" class="p-5 mt-5 bg-white rounded-md">
 
         <div class="flex justify-between items-center pr-4">
           <div>
@@ -265,15 +268,15 @@
         <p class="mt-2 text-[#323B49]">Join our fast-growing startup and work on our core platform. Experience with Node.js and React required. Great benefits and equity package included.</p>
 
         <div class="flex gap-4 mt-5">
-          <button class=" btn btn-primary bg-transparent shadow-none px-3 py-2 text-green-400 border border-green-400 rounded-md font-bold hover: cursor-pointer">INTERVIEW</button>
+          <button id="interview-btn" class=" btn btn-primary bg-transparent shadow-none px-3 py-2 text-green-400 border border-green-400 rounded-md font-bold hover: cursor-pointer">INTERVIEW</button>
 
-          <button class=" btn btn-primary bg-transparent shadow-none px-3 py-2 text-[#EF4444] border border-[#EF4444] rounded-md font-bold hover: cursor-pointer">REJECTED</button>
+          <button id="rejected-btn" class=" btn btn-primary bg-transparent shadow-none px-3 py-2 text-[#EF4444] border border-[#EF4444] rounded-md font-bold hover: cursor-pointer">REJECTED</button>
         </div>
 
-      </div>
+      </div> -->
 
       <!---card-9------>
-      <div id="job-card" class="p-5 mt-5 bg-white rounded-md">
+      <!-- <div id="job-card" class="p-5 mt-5 bg-white rounded-md">
 
         <div class="flex justify-between items-center pr-4">
           <div>
@@ -291,12 +294,12 @@
         <p class="mt-2 text-[#323B49]">We are looking for an experienced Frontend Developer to build scalable web applications using React and TypeScript. You will work with a talented team on cutting-edge projects.</p>
 
         <div class="flex gap-4 mt-5">
-          <button class=" btn btn-primary bg-transparent shadow-none px-3 py-2 text-green-400 border border-green-400 rounded-md font-bold hover: cursor-pointer">INTERVIEW</button>
+          <button  id="interview-btn" class=" btn btn-primary bg-transparent shadow-none px-3 py-2 text-green-400 border border-green-400 rounded-md font-bold hover: cursor-pointer">INTERVIEW</button>
 
-          <button class=" btn btn-primary bg-transparent shadow-none px-3 py-2 text-[#EF4444] border border-[#EF4444] rounded-md font-bold hover: cursor-pointer">REJECTED</button>
+          <button  id="rejected-btn"class=" btn btn-primary bg-transparent shadow-none px-3 py-2 text-[#EF4444] border border-[#EF4444] rounded-md font-bold hover: cursor-pointer">REJECTED</button>
         </div>
 
-      </div>
+      </div> -->
 
       
 
@@ -304,5 +307,6 @@
 
   </section>
 
+  <script src="./script.js"></script>
 </body>
 </html>
