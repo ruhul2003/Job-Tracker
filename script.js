@@ -1,5 +1,6 @@
 const interview_btn = document.getElementById("interview-btn");
 const rejected_btn = document.getElementById("rejected-btn");
+const job_count = document.getElementById("job-count");
 
 const toggle = document.getElementById("interview-toggle");
 const toggle2 = document.getElementById("rejected-toggle");
@@ -25,6 +26,9 @@ interview_btn.addEventListener("click", function () {
 
     toggle.classList.remove("hidden");
     toggle2.classList.add("hidden");
+
+    Number(total.innerText = parseInt(interviewCount.innerText) + parseInt(rejectedCount.innerText));
+    Number(job_count.innerText = parseInt(interviewCount.innerText) + parseInt(rejectedCount.innerText));
 });
 
 rejected_btn.addEventListener("click", function () {
@@ -45,4 +49,5 @@ rejected_btn.addEventListener("click", function () {
     toggle.classList.add("hidden");
 
     Number(total.innerText = parseInt(interviewCount.innerText) + parseInt(rejectedCount.innerText));
+    Number(job_count.innerText = parseInt(interviewCount.innerText) + parseInt(rejectedCount.innerText));
 });
