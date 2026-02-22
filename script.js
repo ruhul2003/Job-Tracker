@@ -1,97 +1,78 @@
-const interview_btn = document.getElementById("interview-btn");
-const rejected_btn = document.getElementById("rejected-btn");
-const job_count = document.getElementById("job-count");
+const cards = document.querySelectorAll(".job-card");
 
-const toggle = document.getElementById("interview-toggle");
-const toggle2 = document.getElementById("rejected-toggle");
-
+const jobCount = document.getElementById("job-count");
+const total = document.getElementById("total");
 const interviewCount = document.getElementById("interview-count");
 const rejectedCount = document.getElementById("rejected-count");
+const deleteBtn = document.querySelectorAll(".delete");
 
+// Function to recalculate counts based on current cards in DOM
+function updateTotal() {
+  const currentCards = document.querySelectorAll(".job-card");
+  let interview = 0;
+  let rejected = 0;
 
-// Delete function
+  currentCards.forEach(card => {
+    const interviewToggle = card.querySelector(".interview-toggle");
+    const rejectedToggle = card.querySelector(".rejected-toggle");
 
-const card = document.getElementById("job-card");
-const delete_btn = document.getElementById("delete");
-delete_btn.addEventListener("click", function () {
-    card.remove();
-    total.innerText = parseInt(total.innerText) - 1;
-    job_count.innerText = parseInt(job_count.innerText) - 1;
-})
-
-let currentStatus = null; // "interview" | "rejected" | null
-
-interview_btn.addEventListener("click", function () {
-
-    if (currentStatus === "interview") return;
-
-    if (currentStatus === "rejected") {
-        rejectedCount.innerText =
-            parseInt(rejectedCount.innerText) - 1;
+    if (interviewToggle && !interviewToggle.classList.contains("hidden")) {
+      interview++;
     }
+    if (rejectedToggle && !rejectedToggle.classList.contains("hidden")) {
+      rejected++;
+    }
+  });
 
-    interviewCount.innerText =
-        parseInt(interviewCount.innerText) + 1;
+  interviewCount.innerHTML = interview;
+  rejectedCount.innerHTML = rejected;
+  total.innerHTML = interview + rejected;
+  jobCount.innerHTML = currentCards.length;
+}
+
+// Delete button functionality
+deleteBtn.forEach(btn => {
+  btn.addEventListener("click", () => {
+    btn.closest(".job-card").remove();
+    updateTotal();
+  });
+});
+
+// Initialize total on page load
+updateTotal();
+
+// Setup interview/rejected buttons for each card
+cards.forEach(card => {
+  let currentStatus = null; // "interview" | "rejected" | null
+
+  const interviewBtn = card.querySelector(".interview-btn");
+  const rejectedBtn = card.querySelector(".rejected-btn");
+  const notApplied = card.querySelector(".notApplied");
+
+  const interviewToggle = card.querySelector(".interview-toggle");
+  const rejectedToggle = card.querySelector(".rejected-toggle");
+
+  interviewBtn.addEventListener("click", () => {
+    if (currentStatus === "interview") return;
 
     currentStatus = "interview";
 
-    toggle.classList.remove("hidden");
-    toggle2.classList.add("hidden");
+    interviewToggle.classList.remove("hidden");
+    rejectedToggle.classList.add("hidden");
+    notApplied.classList.add("hidden");
 
-    Number(total.innerText = parseInt(interviewCount.innerText) + parseInt(rejectedCount.innerText));
-    Number(job_count.innerText = parseInt(interviewCount.innerText) + parseInt(rejectedCount.innerText));
-});
+    updateTotal();
+  });
 
-rejected_btn.addEventListener("click", function () {
-
+  rejectedBtn.addEventListener("click", () => {
     if (currentStatus === "rejected") return;
-
-    if (currentStatus === "interview") {
-        interviewCount.innerText =
-            parseInt(interviewCount.innerText) - 1;
-    }
-
-    rejectedCount.innerText =
-        parseInt(rejectedCount.innerText) + 1;
 
     currentStatus = "rejected";
 
-    toggle2.classList.remove("hidden");
-    toggle.classList.add("hidden");
+    rejectedToggle.classList.remove("hidden");
+    interviewToggle.classList.add("hidden");
+    notApplied.classList.add("hidden");
 
-    Number(total.innerText = parseInt(interviewCount.innerText) + parseInt(rejectedCount.innerText));
-    Number(job_count.innerText = parseInt(interviewCount.innerText) + parseInt(rejectedCount.innerText));
-});
-
-const rejectedList = [];
-const interviewList = [];
-
-if(currentStatus === "interview"){
-    interviewList.push(card);
-    console.log(interviewList);
-}else if(currentStatus === "rejected"){
-    rejectedList.push(card);
-    console.log(rejectedList);
-}
-
-const filterInterview = document.getElementById("interview-filter");
-const filterRejected = document.getElementById("rejected-filter");
-const filterAll = document.getElementById("all-filter");
-
-filterAll.addEventListener("click", function () {
-    card.classList.remove("hidden");
-});
-
-filterInterview.addEventListener("click", function () {
-    card.classList.remove("hidden");
-    for (let i = 0; i < rejectedList.length; i++) {
-        rejectedList[i].classList.add("hidden");
-    }
-});
-
-filterRejected.addEventListener("click", function () {
-    card.classList.remove("hidden");
-    for (let i = 0; i < interviewList.length; i++) {
-        interviewList[i].classList.add("hidden");
-    }
+    updateTotal();
+  });
 });
