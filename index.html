@@ -21,19 +21,19 @@
     <div class="flex gap-6 justify-between w-full">
 
       <!-- Total -->
-      <div class="flex flex-col w-[400px] h-[100px] p-5 mt-6 bg-white rounded-md">
+      <div class="flex flex-col w-[400px] h-[100px] p-5 mt-6 bg-white rounded-md border border-1 border-[#666] hover:-translate-y-1 duration-200">
         <p class="text-sm">Total</p>
         <p id="total" class="mt-3 text-2xl font-bold">0</p>
       </div>
 
       <!-- Interview -->
-      <div class="flex flex-col w-[400px] h-[100px] p-5 mt-6 bg-white rounded-md">
+      <div class="flex flex-col w-[400px] h-[100px] p-5 mt-6 bg-white rounded-md border border-1 border-[#666] hover:-translate-y-1 duration-200">
         <p class="text-sm">Interview</p>
         <p id="interview-count" class="mt-3 text-2xl text-green-400 font-bold">0</p>
       </div>
 
       <!-- Rejected -->
-      <div class="flex flex-col w-[400px] h-[100px] p-5 mt-6 bg-white rounded-md">
+      <div class="flex flex-col w-[400px] h-[100px] p-5 mt-6 bg-white rounded-md border border-1 border-[#666] hover:-translate-y-1 duration-200">
         <p class="text-sm">Rejected</p>
         <p id="rejected-count" class="mt-3 text-2xl text-red-500 font-bold">0</p>
       </div>
@@ -60,12 +60,13 @@
     </div>
 
     <!-- Job Cards Container -->
-    <div id="cards">
+    <div id="cards" class="flex flex-col gap-7">
       <!-- Job Card -->
 
       <!---card-1----->
 
-      <div class="job-card p-5 mt-5 bg-white rounded-md border-l-4 border-[#002C5C] shadow-lg">
+      <div class="job-card p-5 mt-5 bg-white rounded-md border-l-4 border-[#002C5C] shadow-lg hover:-translate-y-1 duration-200 hover:border-l-green-400
+      ">
         <div class="flex justify-between items-center pr-4">
           <div>
             <h2 class="text-lg font-bold">Mobile First Corp</h2>
@@ -89,11 +90,12 @@
         </div>
       </div>
 
-      <div class="job-card p-5 mt-5 bg-white rounded-md border-l-4 border-[#002C5C] shadow-lg">
+      <div class="job-card p-5 mt-5 bg-white rounded-md border-l-4 border-[#002C5C] shadow-lg hover:-translate-y-1 duration-200 hover:border-l-green-400
+      ">
         <div class="flex justify-between items-center pr-4">
           <div>
-            <h2 class="text-lg font-bold">Mobile First Corp</h2>
-            <p class="mt-3 text-[16px] text-[#64748B]">React Native Developer</p>
+            <h2 class="text-lg font-bold">WebFlow Agency</h2>
+            <p class="mt-3 text-[16px] text-[#64748B]">Web Designer & Developer</p>
           </div>
 
           <i class="delete fa-regular fa-trash-can text-[#64748B] p-3 bg-[#F1F2F4] rounded-full hover:cursor-pointer"></i>
@@ -113,11 +115,12 @@
         </div>
       </div>
 
-      <div class="job-card p-5 mt-5 bg-white rounded-md border-l-4 border-[#002C5C] shadow-lg">
+      <div class="job-card p-5 mt-5 bg-white rounded-md border-l-4 border-[#002C5C] shadow-lg hover:-translate-y-1 duration-200 hover:border-l-green-400
+      ">
         <div class="flex justify-between items-center pr-4">
           <div>
-            <h2 class="text-lg font-bold">Mobile First Corp</h2>
-            <p class="mt-3 text-[16px] text-[#64748B]">React Native Developer</p>
+            <h2 class="text-lg font-bold">DataViz Solutions</h2>
+            <p class="mt-3 text-[16px] text-[#64748B]">Data Visualization Specialist</p>
           </div>
 
           <i class="delete fa-regular fa-trash-can text-[#64748B] p-3 bg-[#F1F2F4] rounded-full hover:cursor-pointer"></i>
@@ -137,11 +140,12 @@
         </div>
       </div>
 
-      <div class="job-card p-5 mt-5 bg-white rounded-md border-l-4 border-[#002C5C] shadow-lg">
+      <div class="job-card p-5 mt-5 bg-white rounded-md border-l-4 border-[#002C5C] shadow-lg hover:-translate-y-1 duration-200 hover:border-l-green-400
+      ">
         <div class="flex justify-between items-center pr-4">
           <div>
-            <h2 class="text-lg font-bold">Mobile First Corp</h2>
-            <p class="mt-3 text-[16px] text-[#64748B]">React Native Developer</p>
+            <h2 class="text-lg font-bold">CloudFirst Inc</h2>
+            <p class="mt-3 text-[16px] text-[#64748B]">Backend Developer</p>
           </div>
 
           <i class="delete fa-regular fa-trash-can text-[#64748B] p-3 bg-[#F1F2F4] rounded-full hover:cursor-pointer"></i>
@@ -153,7 +157,7 @@
         <button class="rejected-toggle hidden btn btn-primary bg-transparent shadow-none mt-4 px-3 py-2 text-[#EF4444] border border-[#EF4444] rounded-md font-bold ">REJECTED</button>
 
         <p class="notApplied px-3 py-2 mt-5 text-sm font-semibold bg-[#F1F2F4] rounded-md w-[113px] text-[#002C5C]">NOT APPLIED</p>
-        <p class="mt-2 text-[#323B49]">Build cross-platform mobile applications using React Native.</p>
+        <p class="mt-2 text-[#323B49]">Design and maintain scalable backend systems using Python and AWS. Work with modern DevOps practices and cloud infrastructure.</p>
 
         <div class="flex gap-4 mt-5">
           <button class="interview-btn btn btn-primary bg-transparent shadow-none px-3 py-2 text-green-400 border border-green-400 rounded-md font-bold hover: cursor-pointer">INTERVIEW</button>
@@ -161,11 +165,12 @@
         </div>
       </div>
 
-      <div class="job-card p-5 mt-5 bg-white rounded-md border-l-4 border-[#002C5C] shadow-lg">
+      <div class="job-card p-5 mt-5 bg-white rounded-md border-l-4 border-[#002C5C] shadow-lg hover:-translate-y-1 duration-200 hover:border-l-green-400
+      ">
         <div class="flex justify-between items-center pr-4">
           <div>
-            <h2 class="text-lg font-bold">Mobile First Corp</h2>
-            <p class="mt-3 text-[16px] text-[#64748B]">React Native Developer</p>
+            <h2 class="text-lg font-bold">Innovation L abs</h2>
+            <p class="mt-3 text-[16px] text-[#64748B]">UI/UX Engineer</p>
           </div>
 
           <i class="delete fa-regular fa-trash-can text-[#64748B] p-3 bg-[#F1F2F4] rounded-full hover:cursor-pointer"></i>
@@ -177,7 +182,7 @@
         <button class="rejected-toggle hidden btn btn-primary bg-transparent shadow-none mt-4 px-3 py-2 text-[#EF4444] border border-[#EF4444] rounded-md font-bold ">REJECTED</button>
 
         <p class="notApplied px-3 py-2 mt-5 text-sm font-semibold bg-[#F1F2F4] rounded-md w-[113px] text-[#002C5C]">NOT APPLIED</p>
-        <p class="mt-2 text-[#323B49]">Build cross-platform mobile applications using React Native.</p>
+        <p class="mt-2 text-[#323B49]">Create beautiful and functional user interfaces for our suite of products. Strong design skills and frontend development expertise required.</p>
 
         <div class="flex gap-4 mt-5">
           <button class="interview-btn btn btn-primary bg-transparent shadow-none px-3 py-2 text-green-400 border border-green-400 rounded-md font-bold hover: cursor-pointer">INTERVIEW</button>
@@ -185,11 +190,12 @@
         </div>
       </div>
 
-      <div class="job-card p-5 mt-5 bg-white rounded-md border-l-4 border-[#002C5C] shadow-lg">
+      <div class="job-card p-5 mt-5 bg-white rounded-md border-l-4 border-[#002C5C] shadow-lg hover:-translate-y-1 duration-200 hover:border-l-green-400
+      ">
         <div class="flex justify-between items-center pr-4">
           <div>
-            <h2 class="text-lg font-bold">Mobile First Corp</h2>
-            <p class="mt-3 text-[16px] text-[#64748B]">React Native Developer</p>
+            <h2 class="text-lg font-bold">MegaCorp Solutions</h2>
+            <p class="mt-3 text-[16px] text-[#64748B]">JavaScript Developer</p>
           </div>
 
           <i class="delete fa-regular fa-trash-can text-[#64748B] p-3 bg-[#F1F2F4] rounded-full hover:cursor-pointer"></i>
@@ -201,7 +207,7 @@
         <button class="rejected-toggle hidden btn btn-primary bg-transparent shadow-none mt-4 px-3 py-2 text-[#EF4444] border border-[#EF4444] rounded-md font-bold ">REJECTED</button>
 
         <p class="notApplied px-3 py-2 mt-5 text-sm font-semibold bg-[#F1F2F4] rounded-md w-[113px] text-[#002C5C]">NOT APPLIED</p>
-        <p class="mt-2 text-[#323B49]">Build cross-platform mobile applications using React Native.</p>
+        <p class="mt-2 text-[#323B49]">Build enterprise applications with JavaScript and modern frameworks. We offer competitive compensation, health insurance, and professional development opportunities.</p>
 
         <div class="flex gap-4 mt-5">
           <button class="interview-btn btn btn-primary bg-transparent shadow-none px-3 py-2 text-green-400 border border-green-400 rounded-md font-bold hover: cursor-pointer">INTERVIEW</button>
@@ -209,11 +215,12 @@
         </div>
       </div>
 
-      <div class="job-card p-5 mt-5 bg-white rounded-md border-l-4 border-[#002C5C] shadow-lg">
+      <div class="job-card p-5 mt-5 bg-white rounded-md border-l-4 border-[#002C5C] shadow-lg hover:-translate-y-1 duration-200 hover:border-l-green-400
+      ">
         <div class="flex justify-between items-center pr-4">
           <div>
-            <h2 class="text-lg font-bold">Mobile First Corp</h2>
-            <p class="mt-3 text-[16px] text-[#64748B]">React Native Developer</p>
+            <h2 class="text-lg font-bold">StartupXYZ</h2>
+            <p class="mt-3 text-[16px] text-[#64748B]">Full Stack Engineer</p>
           </div>
 
           <i class="delete fa-regular fa-trash-can text-[#64748B] p-3 bg-[#F1F2F4] rounded-full hover:cursor-pointer"></i>
@@ -225,7 +232,7 @@
         <button class="rejected-toggle hidden btn btn-primary bg-transparent shadow-none mt-4 px-3 py-2 text-[#EF4444] border border-[#EF4444] rounded-md font-bold ">REJECTED</button>
 
         <p class="notApplied px-3 py-2 mt-5 text-sm font-semibold bg-[#F1F2F4] rounded-md w-[113px] text-[#002C5C]">NOT APPLIED</p>
-        <p class="mt-2 text-[#323B49]">Build cross-platform mobile applications using React Native.</p>
+        <p class="mt-2 text-[#323B49]">Join our fast-growing startup and work on our core platform. Experience with Node.js and React required. Great benefits and equity package included.</p>
 
         <div class="flex gap-4 mt-5">
           <button class="interview-btn btn btn-primary bg-transparent shadow-none px-3 py-2 text-green-400 border border-green-400 rounded-md font-bold hover: cursor-pointer">INTERVIEW</button>
@@ -233,11 +240,12 @@
         </div>
       </div>
 
-      <div class="job-card p-5 mt-5 bg-white rounded-md border-l-4 border-[#002C5C] shadow-lg">
+      <div class="job-card p-5 mt-5 bg-white rounded-md border-l-4 border-[#002C5C] shadow-lg hover:-translate-y-1 duration-200 hover:border-l-green-400
+      ">
         <div class="flex justify-between items-center pr-4">
           <div>
-            <h2 class="text-lg font-bold">Mobile First Corp</h2>
-            <p class="mt-3 text-[16px] text-[#64748B]">React Native Developer</p>
+            <h2 class="text-lg font-bold">TechCorp Industries</h2>
+            <p class="mt-3 text-[16px] text-[#64748B]">Senior Frontend Developer</p>
           </div>
 
           <i class="delete fa-regular fa-trash-can text-[#64748B] p-3 bg-[#F1F2F4] rounded-full hover:cursor-pointer"></i>
@@ -249,7 +257,7 @@
         <button class="rejected-toggle hidden btn btn-primary bg-transparent shadow-none mt-4 px-3 py-2 text-[#EF4444] border border-[#EF4444] rounded-md font-bold ">REJECTED</button>
 
         <p class="notApplied px-3 py-2 mt-5 text-sm font-semibold bg-[#F1F2F4] rounded-md w-[113px] text-[#002C5C]">NOT APPLIED</p>
-        <p class="mt-2 text-[#323B49]">Build cross-platform mobile applications using React Native.</p>
+        <p class="mt-2 text-[#323B49]">We are looking for an experienced Frontend Developer to build scalable web applications using React and TypeScript. You will work with a talented team on cutting-edge projects.</p>
 
         <div class="flex gap-4 mt-5">
           <button class="interview-btn btn btn-primary bg-transparent shadow-none px-3 py-2 text-green-400 border border-green-400 rounded-md font-bold hover: cursor-pointer">INTERVIEW</button>
@@ -257,7 +265,8 @@
         </div>
       </div>
 
-      <div class="job-card p-5 mt-5 bg-white rounded-md border-l-4 border-[#002C5C] shadow-lg">
+      <div class="job-card p-5 mt-5 bg-white rounded-md border-l-4 border-[#002C5C] shadow-lg hover:-translate-y-1 duration-200 hover:border-l-green-400
+      ">
         <div class="flex justify-between items-center pr-4">
           <div>
             <h2 class="text-lg font-bold">Mobile First Corp</h2>
@@ -283,10 +292,10 @@
     </div>
   </section>
 
-  <div id="empty-message" class=" flex flex-col items-center justify-center gap-3 h-[252px] mt-34">
-    <img src="./Images/jobs.png" alt="">
-    <h2 class="text-2xl font-bold">No Jobs Available</h2>
-    <p>Check back soon for new job opportunities</p>
+  <div id="empty-message" class=" hidden text-center items-center  h-[252px] mt-34 mx-auto w-auto">
+    <img class="mx-auto" src="./Images/jobs.png" alt="">
+    <h2 class="text-2xl font-bold mt-5">No Jobs Available</h2>
+    <p class="mt-4">Check back soon for new job opportunities</p>
   </div>
 
   <script src="./script.js"></script>
